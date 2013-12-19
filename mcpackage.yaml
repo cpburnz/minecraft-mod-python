@@ -15,7 +15,8 @@ library:
   # The directory containing additional libraries required by the mod. Default
   # is "lib".
   dir: null
-  # The libraries (ZIP or JAR) to package (merge) with the built mod JAR.
+  # Patterns used to match libraries (ZIP or JAR) to package (merge) with the
+  # built mod JAR.
   package:
     - '*.jar'
 # Settings pertaining to the mod source code.
