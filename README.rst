@@ -1,26 +1,25 @@
 
+*pymod*: Minecraft Python Mod
+=============================
+
+TODO: Description of *pymod*
+
 
 NOTICE
-======
+------
 
 This is still under development, not necessarily stable, lacks formal
 documentation, and has no examples.
 
 
 TODO
-====
+----
 
 - Finish *mcpackage*.
 
 - Tutorial for getting started.
 
 - Generate documentation.
-
-
-*pymod*: Minecraft Python Mod
-=============================
-
-TODO: Description of *pymod*
 
 
 Tutorial
