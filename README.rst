@@ -70,3 +70,9 @@ Documentation
 -------------
 
 TODO
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/cpburnz/minecraft-mod-python/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
