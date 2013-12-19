@@ -32,4 +32,5 @@ source:
     - '*.py'
   # Patterns used to match assests or any additional files to package.
   extra:
+    - '/mcmod.info'
     - '/cpburnz/minecraft/java/jython/**/*.py'

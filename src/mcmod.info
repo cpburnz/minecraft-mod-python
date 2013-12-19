@@ -1,0 +1,23 @@
+{
+	"modinfoversion": 2,
+	"modlist": [
+		{
+			"modid": "pymod",
+			"name": "Python Mod",
+			"description": "Create Minecraft Mods in Python.",
+			"version": "0.2",
+			"mcversion": "1.7.2",
+			"url": "https://github.com/cpburnz/minecraft-mod-python",
+			"updateUrl": "",
+			"authors": ["cpburnz"],
+			"credits": "",
+			"logoFile": "",
+			"screenshots": [],
+			"parent": "",
+			"requiredMods": ["Forge"],
+			"dependencies": [],
+			"dependants": [],
+			"useDependencyInformation": "true"
+		}
+	]
+}
