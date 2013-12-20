@@ -8,7 +8,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid="PyMod", name="PyMod", version="0.1")
+@Mod(modid="pymod", useMetadata=true)
 public final class PyModMod {
 
 	// The singleton instance of this mod for Forge.
