@@ -84,7 +84,8 @@ public abstract class JavaMod {
 		this.log.fine("Load %s.%s", moduleName, className);
 		final PyObject pyModule = PyMod.python.importModule(moduleName);
 		final PyObject pyModClass = pyModule.__getattr__(pyClassName);
-		this.pythonMod = (IPythonMod)pyModClass.__call__().__tojava__(IPythonMod.class);
+		final PyObject pyModInst = pyModClass.__call__();
+		this.pythonMod = (IPythonMod)pyModInst.__tojava__(IPythonMod.class);
 
 		// Call mod pre-init.
 		this.log.fine("Pre-initialization.");
