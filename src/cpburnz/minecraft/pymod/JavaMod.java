@@ -1,6 +1,8 @@
 package cpburnz.minecraft.pymod;
 
+import cpburnz.minecraft.pymod.IPythonMod;
 import cpburnz.minecraft.pymod.Logger;
+import cpburnz.minecraft.pymod.PyMod;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLInterModComms;
