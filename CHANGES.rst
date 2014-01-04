@@ -6,6 +6,7 @@ Change History
 -----------
 
 - Restructured layout of classes.
+- Refactored mod sub-classing.
 - Commented classes.
 
 
