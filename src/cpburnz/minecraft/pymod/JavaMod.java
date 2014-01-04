@@ -34,7 +34,7 @@ public abstract class JavaMod {
 	 */
 	public JavaMod() {
 		// Create logger.
-		Mod modInfo = this.getClass().getAnnotation(Mod.class);
+		final Mod modInfo = this.getClass().getAnnotation(Mod.class);
 		final String logName = modInfo.modid();
 		this.log = Logger(logName);
 	}
@@ -108,7 +108,7 @@ public abstract class JavaMod {
 	 * *event* is the inter-mod communications event.
 	 */
 	public void interModComms(FMLInterModComms event) {
-		this.log.fine("Inter mod communications.");
+		this.log.fine("Inter-mod communications.");
 		this.pythonMod.interModComms(event);
 	}
 
