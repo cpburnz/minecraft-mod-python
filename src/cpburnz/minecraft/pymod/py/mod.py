@@ -15,7 +15,9 @@ class PythonMod(IPythonMod):
 
 	def preInit(self, event):
 		"""
-		Called when the pre-initialization event occurs.
+		Called when the pre-initialization event occurs. This is run before
+		anything else. Read your config, create blocks, items, etc., and
+		register them with the ``GameRegistery``.
 
 		*event* (``cpw.mods.fml.common.event.FMLPreInitializationEvent``) is
 		the pre-initialization event.
@@ -24,7 +26,9 @@ class PythonMod(IPythonMod):
 
 	def init(self, event):
 		"""
-		Called when the initialization event occurs.
+		Called when the initialization event occurs. Do your mod setup.
+		Build whatever data structures you care about. Register recipes,
+		send inter-mod communication messages to other mods.
 
 		*event* (``cpw.mods.fml.common.event.FMLInitializationEvent``) is
 		the initialization event.
@@ -42,7 +46,8 @@ class PythonMod(IPythonMod):
 
 	def postInit(self, event):
 		"""
-		Called when the post-initialization event occurs.
+		Called when the post-initialization event occurs. Handle interaction
+		with other mods, complete your setup based on this.
 
 		*event* (``cpw.mods.fml.common.event.FMLPostInitializationEvent``)
 		is the post-initialization event.
@@ -51,7 +56,8 @@ class PythonMod(IPythonMod):
 
 	def serverAboutToStart(self, event):
 		"""
-		Called when the server-about-to-start event occurs.
+		Called when the server-about-to-start event occurs. Use if you need
+		to handle something before the server has even been created.
 
 		*event* (``cpw.mods.fml.common.event.FMLServerAboutToStartEvent``)
 		is the server-about-to-start event.
@@ -60,7 +66,8 @@ class PythonMod(IPythonMod):
 
 	def serverStarting(self, event):
 		"""
-		Called when the server-starting event occurs.
+		Called when the server-starting event occurs. Do you stuff you need
+		to do to setup the server. Register commands, treak the server.
 
 		*event* (``cpw.mods.fml.common.event.FMLServerStartingEvent``) is
 		the server-starting event.
@@ -69,7 +76,8 @@ class PythonMod(IPythonMod):
 
 	def serverStarted(self, event):
 		"""
-		Called when the server-started event occurs.
+		Called when the server-started event occurs. Do what you need to
+		with the running server.
 
 		*event* (``cpw.mods.fml.common.event.FMLServerStartedEvent``) is the
 		server-started event.
@@ -78,7 +86,8 @@ class PythonMod(IPythonMod):
 
 	def serverStopping(self, event):
 		"""
-		Called when the server-stopping event occurs.
+		Called when the server-stopping event occurs. Do what you need to do
+		before the server has started its shutdown sequence.
 
 		*event* (``cpw.mods.fml.common.event.FMLServerStoppingEvent``) is
 		the server-stopping event.
@@ -87,7 +96,9 @@ class PythonMod(IPythonMod):
 
 	def serverStopped(self, event):
 		"""
-		Called when the server-stopped event occurs.
+		Called when the server-stopped event occurs. Do whatever clean-up
+		you need once the server has shutdown. Generally only useful on the
+		integrated server.
 
 		*event* (``cpw.mods.fml.common.event.FMLServerStoppedEvent``) is the
 		server-stopped event.

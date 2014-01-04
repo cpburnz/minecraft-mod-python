@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import cpw.mods.fml.common.FMLLog;
 
 /**
- * The ``Logger`` class is a wrapper around the FML logger.
+ * A wrapper around the FML logger.
  */
 public class Logger {
 
@@ -15,7 +15,7 @@ public class Logger {
 	private String logName;
 
 	/**
-	 * Initializes the ``Logger`` instance.
+	 * Initializes the instance.
 	 *
 	 * *logName* is the name to use when logging.
 	 */
