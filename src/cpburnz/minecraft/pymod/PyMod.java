@@ -35,7 +35,7 @@ public final class PyMod {
 	public PyMod() {
 		// Create logger.
 		final String logName = "pymod:" + this.getClass().getSimpleName();
-		this.log = Logger(logName);
+		this.log = new Logger(logName);
 	}
 
 	/**

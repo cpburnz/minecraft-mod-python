@@ -11,6 +11,7 @@ import org.python.core.PySystemState;
 import org.python.util.PythonInterpreter;
 
 import cpw.mods.fml.common.FMLLog;
+import cpburnz.minecraft.pymod.Logger;
 
 /**
  * A wrapper around the Python interpreter.
@@ -42,7 +43,8 @@ public class Python {
 	 */
 	public Python() {
 		// Create logger.
-		this.log = Logger("pymod:" + this.getClass().getSimpleName();
+		final String logName = "pymod:" + this.getClass().getSimpleName();
+		this.log = new Logger(logName);
 
 		// Create python system state.
 		this.log.fine("Create system state.");
@@ -66,15 +68,15 @@ public class Python {
 
 		// Initialize python environment.
 		this.log.fine("Initialize python environment.");
-		final String pyModuleName = Py.newString(this.getClass().getPackage().getName() + ".py");
-		final String PyInitName = Py.newString("__init__");
+		final PyString pyModuleName = Py.newString(this.getClass().getPackage().getName() + ".py");
+		final PyString PyInitName = Py.newString("__init__");
 		final PyObject pyModule = this.importModule(pyModuleName);
 		final PyObject pyInitFunc = pyModule.__getattr__(PyInitName);
 		pyInitFunc.__call__();
 
 		// Get importer.
 		this.log.fine("Get importer.");
-		final String pyImportName = Py.newString("__import__");
+		final PyString pyImportName = Py.newString("__import__");
 		this.importer = this.sys.getBuiltins().__getitem__(pyImportName);
 	}
 
@@ -83,13 +85,24 @@ public class Python {
 	 *
 	 * *moduleName* is the python module to import.
 	 *
-	 * Returns the python module.w
+	 * Returns the python module.
 	 */
 	public PyObject importModule(String moduleName) {
+		final PyString pyModuleName = Py.newString(moduleName);
+		return this.importModule(pyModuleName);
+	}
+
+	/**
+	 * Helper method to import a python module.
+	 *
+	 * *pyModuleName* is the python module to import.
+	 *
+	 * Returns the python module.
+	 */
+	public PyObject importModule(PyString pyModuleName) {
 		// Import the python module.
 		// - NOTE: The importer returns the top-level module so grab the imported
 		//   module from *sys.modules*.
-		final PyString pyModuleName = Py.newString(moduleName);
 		this.importer.__call__(pyModuleName);
 		return this.sys.modules.__getitem__(pyModuleName);
 	}

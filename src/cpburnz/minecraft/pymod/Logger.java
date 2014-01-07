@@ -32,8 +32,8 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public log(Level level, String format, Object... args) {
-		FMLLog.log(this.logName, level, format, args)
+	public void log(Level level, String format, Object... args) {
+		FMLLog.log(this.logName, level, format, args);
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public log(Level level, Throwable ex, String format, Object... args) {
+	public void log(Level level, Throwable ex, String format, Object... args) {
 		FMLLog.log(this.logName, level, ex, format, args);
 	}
 
@@ -58,7 +58,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public severe(String format, Object... args) {
+	public void severe(String format, Object... args) {
 		this.log(Level.SEVERE, format, args);
 	}
 
@@ -71,7 +71,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public severe(Throwable ex, String format, Object... args) {
+	public void severe(Throwable ex, String format, Object... args) {
 		this.log(Level.SEVERE, ex, format, args);
 	}
 
@@ -82,7 +82,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public warning(String format, Object... args) {
+	public void warning(String format, Object... args) {
 		this.log(Level.WARNING, format, args);
 	}
 
@@ -95,7 +95,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public warning(Throwable ex ,String format, Object... args) {
+	public void warning(Throwable ex ,String format, Object... args) {
 		this.log(Level.WARNING, ex, format, args);
 	}
 
@@ -106,7 +106,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public info(String format, Object... args) {
+	public void info(String format, Object... args) {
 		this.log(Level.INFO, format, args);
 	}
 
@@ -117,7 +117,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public fine(String format, Object... args) {
+	public void fine(String format, Object... args) {
 		this.log(Level.FINE, format, args);
 	}
 
@@ -128,7 +128,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public finer(String format, Object... args) {
+	public void finer(String format, Object... args) {
 		this.log(Level.FINER, format, args);
 	}
 
@@ -139,7 +139,7 @@ public class Logger {
 	 *
 	 * *args* contains the message format arguments.
 	 */
-	public finest(String format, Object... args) {
+	public void finest(String format, Object... args) {
 		this.log(Level.FINEST, format, args);
 	}
 

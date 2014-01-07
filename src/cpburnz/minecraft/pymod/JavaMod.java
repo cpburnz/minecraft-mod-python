@@ -1,5 +1,9 @@
 package cpburnz.minecraft.pymod;
 
+import org.python.core.Py;
+import org.python.core.PyObject;
+import org.python.core.PyString;
+
 import cpburnz.minecraft.pymod.IPythonMod;
 import cpburnz.minecraft.pymod.Logger;
 import cpburnz.minecraft.pymod.PyMod;
@@ -36,7 +40,7 @@ public abstract class JavaMod {
 		// Create logger.
 		final Mod modInfo = this.getClass().getAnnotation(Mod.class);
 		final String logName = modInfo.modid();
-		this.log = Logger(logName);
+		this.log = new Logger(logName);
 	}
 
 	/**
