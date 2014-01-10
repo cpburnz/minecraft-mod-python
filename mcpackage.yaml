@@ -30,6 +30,7 @@ source:
   # - TODO; This is not actually used yet.
   python:
     - '*.py'
+    - '!old/'
   # Patterns used to match assests or any additional files to package.
   extra:
     - '/mcmod.info'
