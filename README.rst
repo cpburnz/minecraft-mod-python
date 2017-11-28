@@ -1,4 +1,11 @@
 
+ABANDONED
+=========
+
+This project has been abandoned.
+
+
+
 *pymod*: Minecraft Python Mod
 =============================
 
